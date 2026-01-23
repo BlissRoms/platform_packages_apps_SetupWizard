@@ -4,13 +4,13 @@
 //
 
 android_app {
-    name: "LineageSetupWizard",
+    name: "BlissSetupWizard",
 
     srcs: ["src/**/*.java"],
 
     certificate: "platform",
     privileged: true,
-    privapp_allowlist: "org.lineageos.setupwizard.xml",
+    privapp_allowlist: "org.blissroms.setupwizard.xml",
     system_ext_specific: true,
     platform_apis: true,
 
