@@ -17,6 +17,7 @@ import androidx.activity.result.ActivityResult;
 
 import org.blissroms.setupwizard.R;
 import org.blissroms.setupwizard.SubBaseActivity;
+import org.blissroms.setupwizard.util.SetupWizardUtils;
 
 public class RestoreIntroActivity extends SubBaseActivity {
 
@@ -24,7 +25,7 @@ public class RestoreIntroActivity extends SubBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getGlifLayout().setDescriptionText(getString(R.string.intro_restore_subtitle,
-                getString(R.string.os_name)));
+                SetupWizardUtils.getProjectName(this)));
     }
 
     @Override

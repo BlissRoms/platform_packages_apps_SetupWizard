@@ -67,8 +67,20 @@ public class SetupWizardUtils {
     private static final String UPDATE_RECOVERY_EXEC = "/vendor/bin/install-recovery.sh";
     private static final String CONFIG_HIDE_RECOVERY_UPDATE = "config_hideRecoveryUpdate";
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
+    private static final String PROP_PROJECT = "ro.bliss.project";
 
     private SetupWizardUtils() {
+    }
+
+    /**
+     * Get the project name from the system property, falling back to the string resource.
+     */
+    public static String getProjectName(Context context) {
+        String projectName = SystemProperties.get(PROP_PROJECT, "");
+        if (projectName.isEmpty()) {
+            projectName = context.getString(org.blissroms.setupwizard.R.string.os_name);
+        }
+        return projectName;
     }
 
     public static SharedPreferences getPrefs(Context context) {

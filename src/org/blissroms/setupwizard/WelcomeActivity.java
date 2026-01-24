@@ -22,8 +22,7 @@ import org.blissroms.setupwizard.util.SetupWizardUtils;
 
 public class WelcomeActivity extends SubBaseActivity {
 
-    private static final String ACTION_ACCESSIBILITY_SETTINGS =
-            "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
+    private static final String ACTION_ACCESSIBILITY_SETTINGS = "android.settings.ACCESSIBILITY_SETTINGS_FOR_SUW";
 
     @Override
     protected void onStartSubactivity() {
@@ -60,7 +59,7 @@ public class WelcomeActivity extends SubBaseActivity {
             welcomeTitle.setText(getString(R.string.setup_managed_profile_welcome_message));
         } else {
             welcomeTitle.setText(getString(R.string.setup_welcome_message,
-                    getString(R.string.os_name)));
+                    SetupWizardUtils.getProjectName(this)));
         }
 
         if (Build.TYPE.equals("eng")) {

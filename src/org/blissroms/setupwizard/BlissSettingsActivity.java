@@ -21,6 +21,8 @@ import android.widget.TextView;
 import lineageos.hardware.LineageHardwareManager;
 import lineageos.providers.LineageSettings;
 
+import org.blissroms.setupwizard.util.SetupWizardUtils;
+
 public class BlissSettingsActivity extends BaseSetupWizardActivity {
 
     private SetupWizardApp mSetupWizardApp;
@@ -48,7 +50,7 @@ public class BlissSettingsActivity extends BaseSetupWizardActivity {
         mSetupWizardApp = (SetupWizardApp) getApplication();
         setNextText(R.string.next);
 
-        String os_name = getString(R.string.os_name);
+        String os_name = SetupWizardUtils.getProjectName(this);
         String privacyPolicy = getString(R.string.services_pp_explanation, os_name);
         String privacyPolicyUri = getString(R.string.services_privacy_policy_uri);
         String policySummary = getString(R.string.services_find_privacy_policy, privacyPolicyUri);
@@ -59,8 +61,7 @@ public class BlissSettingsActivity extends BaseSetupWizardActivity {
         View metricsRow = findViewById(R.id.metrics);
         metricsRow.setOnClickListener(mMetricsClickListener);
         metricsRow.requestFocus();
-        String metricsHelpImproveBliss =
-                getString(R.string.services_help_improve_cm, os_name);
+        String metricsHelpImproveBliss = getString(R.string.services_help_improve_cm, os_name);
         String metricsSummary = getString(R.string.services_metrics_label,
                 metricsHelpImproveBliss, os_name, os_name);
         final SpannableStringBuilder metricsSpan = new SpannableStringBuilder(metricsSummary);
@@ -106,9 +107,8 @@ public class BlissSettingsActivity extends BaseSetupWizardActivity {
 
     private void updateMetricsOption() {
         final Bundle myPageBundle = mSetupWizardApp.getSettingsBundle();
-        boolean metricsChecked =
-                !myPageBundle.containsKey(KEY_SEND_METRICS) || myPageBundle
-                        .getBoolean(KEY_SEND_METRICS);
+        boolean metricsChecked = !myPageBundle.containsKey(KEY_SEND_METRICS) || myPageBundle
+                .getBoolean(KEY_SEND_METRICS);
         mMetrics.setChecked(metricsChecked);
         myPageBundle.putBoolean(KEY_SEND_METRICS, metricsChecked);
     }
@@ -118,9 +118,8 @@ public class BlissSettingsActivity extends BaseSetupWizardActivity {
             final Bundle myPageBundle = mSetupWizardApp.getSettingsBundle();
             boolean enabled = LineageSettings.System.getIntForUser(getContentResolver(),
                     LineageSettings.System.FORCE_SHOW_NAVBAR, 0, UserHandle.USER_CURRENT) != 0;
-            boolean checked = myPageBundle.containsKey(DISABLE_NAV_KEYS) ?
-                    myPageBundle.getBoolean(DISABLE_NAV_KEYS) :
-                    enabled;
+            boolean checked = myPageBundle.containsKey(DISABLE_NAV_KEYS) ? myPageBundle.getBoolean(DISABLE_NAV_KEYS)
+                    : enabled;
             mNavKeys.setChecked(checked);
             myPageBundle.putBoolean(DISABLE_NAV_KEYS, checked);
         }
