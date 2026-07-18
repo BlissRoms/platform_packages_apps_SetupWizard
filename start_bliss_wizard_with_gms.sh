@@ -11,6 +11,8 @@ adb shell pm enable org.blissroms.setupwizard/.SetupWizardActivity || true
 wait ${!}
 adb shell pm enable org.lineageos.setupwizard/.DeviceSpecificActivity || true
 wait ${!}
+adb shell pm enable org.lineageos.setupwizard/.DeviceSpecificActivity || true
+wait ${!}
 adb shell pm enable com.google.android.setupwizard || true
 wait ${!}
 if adb shell pm list packages | grep com.android.provision; then
