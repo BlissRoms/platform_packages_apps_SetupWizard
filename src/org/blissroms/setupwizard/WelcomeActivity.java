@@ -58,8 +58,7 @@ public class WelcomeActivity extends SubBaseActivity {
         if (SetupWizardUtils.isManagedProfile(this)) {
             welcomeTitle.setText(getString(R.string.setup_managed_profile_welcome_message));
         } else {
-            welcomeTitle.setText(getString(R.string.setup_welcome_message,
-                    SetupWizardUtils.getProjectName(this)));
+            welcomeTitle.setText(getString(R.string.setup_welcome_message));
         }
 
         if (Build.TYPE.equals("eng")) {

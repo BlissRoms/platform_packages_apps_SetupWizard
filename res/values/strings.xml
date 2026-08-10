@@ -22,7 +22,7 @@
     <string name="loading">Just a sec\u2026</string>
 
     <!-- Welcome page -->
-    <string name="setup_welcome_message">Welcome to <xliff:g id="name" example="Bliss">%1$s</xliff:g></string>
+    <string name="setup_welcome_message">Hello</string>
     <string name="setup_managed_profile_welcome_message">Set up your work profile</string>
     <string name="emergency_call">Emergency call</string>
     <string name="accessibility_settings">Accessibility settings</string>
@@ -81,4 +81,7 @@
     <string name="theme_summary">Dark theme uses a black background to help keep battery alive longer on some screens</string>
     <string name="dark">Dark</string>
     <string name="light">Light</string>
+    <!-- Finish page -->
+    <string name="welcome_to_blissroms">Welcome to BlissRoms</string>
+    <string name="have_a_blissful_experience">Have a pleasant and Blissful experience!</string>
 </resources>

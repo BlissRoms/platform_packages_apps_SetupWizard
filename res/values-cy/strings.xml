@@ -12,7 +12,7 @@
     <string name="done">Cwblhau</string>
     <string name="ok">Iawn</string>
     <string name="loading">Un eiliad\u2026</string>
-    <string name="setup_welcome_message">Croeso i <xliff:g id="name" example="Bliss">%1$s</xliff:g></string>
+    <string name="setup_welcome_message">Helo</string>
     <string name="setup_managed_profile_welcome_message">Gosod dy broffil gwaith</string>
     <string name="emergency_call">Galwad brys</string>
     <string name="accessibility_settings">Gosodiadau hygyrchedd</string>

@@ -35,11 +35,15 @@
                     <RadioButton
                         android:id="@+id/radio_dark"
                         android:text="@string/dark"
+                        android:drawableStart="@drawable/ic_mode_dark"
+                        android:drawablePadding="16dp"
                         style="@style/SudRadioButton" />
 
                     <RadioButton
                         android:id="@+id/radio_light"
                         android:text="@string/light"
+                        android:drawableStart="@drawable/ic_mode_light"
+                        android:drawablePadding="16dp"
                         style="@style/SudRadioButton" />
 
                 </RadioGroup>

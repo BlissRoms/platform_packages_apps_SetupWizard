@@ -12,7 +12,7 @@
     <string name="done">Fat</string>
     <string name="ok">Va ben</string>
     <string name="loading">Dome un secont\u2026</string>
-    <string name="setup_welcome_message">Benvignûts su <xliff:g id="name" example="Bliss">%1$s</xliff:g></string>
+    <string name="setup_welcome_message">Mandi</string>
     <string name="setup_managed_profile_welcome_message">Configure il to profîl di lavôr</string>
     <string name="emergency_call">Clamade di emergjence</string>
     <string name="accessibility_settings">Impostazions di acès facilitât</string>

@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.view.Window;
+import android.widget.Button;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -84,8 +85,66 @@ public class FinishActivity extends BaseSetupWizardActivity {
             return WindowInsetsCompat.CONSUMED;
         });
 
+        Bundle settingsBundle = SetupWizardApp.getSettingsBundle();
+        boolean isGestural = settingsBundle.containsKey(SetupWizardApp.NAVIGATION_OPTION_KEY) &&
+                "com.android.internal.systemui.navbar.gestural".equals(
+                        settingsBundle.getString(SetupWizardApp.NAVIGATION_OPTION_KEY));
+        
+        if (isGestural) {
+            View navBar = findViewById(R.id.navigation_bar);
+            if (navBar != null) {
+                navBar.setVisibility(View.GONE);
+            }
+            
+            SystemBarHelper.setBackButtonVisible(getWindow(), false);
+            
+            android.widget.TextView swipeUpHint = findViewById(R.id.swipe_up_hint);
+            if (swipeUpHint != null) {
+                swipeUpHint.setVisibility(View.VISIBLE);
+                
+                android.animation.ObjectAnimator animator = android.animation.ObjectAnimator.ofFloat(swipeUpHint, "translationY", 0f, -20f, 0f);
+                animator.setDuration(1500);
+                animator.setRepeatCount(android.animation.ValueAnimator.INFINITE);
+                animator.start();
+            }
+        }
+
         if (sFinishState != FinishState.NONE) {
             disableNavigation();
+        } else {
+            if (isGestural) {
+                
+                final android.view.GestureDetector gestureDetector = new android.view.GestureDetector(this, new android.view.GestureDetector.SimpleOnGestureListener() {
+                    @Override
+                    public boolean onDown(android.view.MotionEvent e) {
+                        return true;
+                    }
+                    @Override
+                    public boolean onFling(android.view.MotionEvent e1, android.view.MotionEvent e2, float velocityX, float velocityY) {
+                        if (e1 != null && e2 != null) {
+                            float diffX = e2.getX() - e1.getX();
+                            float diffY = e2.getY() - e1.getY();
+                            if (Math.abs(diffX) > Math.abs(diffY)) {
+                                if (Math.abs(diffX) > 100 && Math.abs(velocityX) > 100) {
+                                    getOnBackPressedDispatcher().onBackPressed();
+                                    return true;
+                                }
+                            } else if (diffY < -100 && Math.abs(velocityY) > 100) {
+                                Button nextBtn = getNextButton();
+                                if (nextBtn != null && nextBtn.isEnabled()) {
+                                    nextBtn.performClick();
+                                } else {
+                                    onNavigateNext();
+                                }
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                });
+                
+                mRootView.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
+            }
         }
 
         switch (sFinishState) {

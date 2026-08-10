@@ -12,7 +12,7 @@
     <string name="done">Fet</string>
     <string name="ok">Accepta</string>
     <string name="loading">Només un seg\u2026</string>
-    <string name="setup_welcome_message">Benvingut a <xliff:g id="name" example="Bliss">%1$s</xliff:g></string>
+    <string name="setup_welcome_message">Hola</string>
     <string name="setup_managed_profile_welcome_message">Configureu el perfil de treball</string>
     <string name="emergency_call">Trucada d\'emergència</string>
     <string name="accessibility_settings">Configuració d\'accessibilitat</string>

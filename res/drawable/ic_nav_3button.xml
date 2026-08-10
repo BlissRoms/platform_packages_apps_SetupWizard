@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="24dp"
+    android:viewportWidth="48"
+    android:viewportHeight="24"
+    android:tint="?android:attr/colorControlNormal">
+  <!-- Back (Triangle pointing left) -->
+  <path
+      android:fillColor="@android:color/white"
+      android:pathData="M14,17 L5,12 L14,7 V17Z" />
+  <!-- Home (Circle) -->
+  <path
+      android:fillColor="@android:color/white"
+      android:pathData="M24,7 C21.24,7 19,9.24 19,12 C19,14.76 21.24,17 24,17 C26.76,17 29,14.76 29,12 C29,9.24 26.76,7 24,7Z" />
+  <!-- Recents (Square) -->
+  <path
+      android:fillColor="@android:color/white"
+      android:pathData="M44,7 H34 V17 H44 V7Z" />
+</vector>

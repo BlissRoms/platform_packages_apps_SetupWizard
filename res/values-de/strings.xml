@@ -12,7 +12,7 @@
     <string name="done">Fertig</string>
     <string name="ok">OK</string>
     <string name="loading">Einen Moment\u2026</string>
-    <string name="setup_welcome_message">Willkommen bei <xliff:g id="name" example="Bliss">%1$s</xliff:g></string>
+    <string name="setup_welcome_message">Hallo</string>
     <string name="setup_managed_profile_welcome_message">Erstelle dein Arbeitsprofil</string>
     <string name="emergency_call">Notruf</string>
     <string name="accessibility_settings">Einstellungen zur Barrierefreiheit</string>

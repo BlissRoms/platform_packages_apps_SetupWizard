@@ -12,7 +12,7 @@
     <string name="done">Xong</string>
     <string name="ok">OK</string>
     <string name="loading">Vui lòng đợi một giây\u2026</string>
-    <string name="setup_welcome_message">Chào mừng bạn đến <xliff:g id="name" example="Bliss">%1$s</xliff:g></string>
+    <string name="setup_welcome_message">Xin chào</string>
     <string name="setup_managed_profile_welcome_message">Thiết lập hồ sơ công việc của bạn</string>
     <string name="emergency_call">Cuộc gọi khẩn cấp</string>
     <string name="accessibility_settings">Cài đặt trợ năng</string>

@@ -28,16 +28,58 @@
         android:orientation="vertical"
         style="@style/SudContentFrame">
 
-        <ImageView
-            android:id="@+id/brand_logo"
+        <Space android:layout_width="match_parent"
+               android:layout_height="0px"
+               android:layout_weight="1"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            android:src="@drawable/logo"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/brand_logo"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
+                android:src="@drawable/logo"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to_blissroms"
+                android:textSize="24sp"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="24dp"
+                android:textColor="?android:attr/textColorPrimary"/>
+
+            <TextView
+                android:id="@+id/hint_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/have_a_blissful_experience"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <Space android:layout_width="match_parent"
+               android:layout_height="0px"
+               android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/swipe_up_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Swipe up to start"
+            android:textSize="16sp"
             android:gravity="center"
-            android:padding="@dimen/content_margin_left"/>
+            android:visibility="gone"
+            android:layout_marginBottom="32dp"
+            android:textColor="?android:attr/textColorSecondary"/>
 
         <org.blissroms.setupwizard.NavigationLayout
             android:id="@+id/navigation_bar"

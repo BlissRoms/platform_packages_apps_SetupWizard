@@ -49,12 +49,16 @@
                         <RadioButton
                             android:id="@+id/radio_gesture"
                             android:text="@string/gesture_navigation"
+                            android:drawableStart="@drawable/ic_nav_gesture"
+                            android:drawablePadding="16dp"
                             android:checked="true"
                             style="@style/SudRadioButton" />
 
                         <RadioButton
                             android:id="@+id/radio_sw_keys"
                             android:text="@string/navbar_navigation"
+                            android:drawableStart="@drawable/ic_nav_3button"
+                            android:drawablePadding="16dp"
                             style="@style/SudRadioButton" />
 
                     </RadioGroup>
