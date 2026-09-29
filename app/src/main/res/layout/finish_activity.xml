@@ -10,7 +10,7 @@
     android:layout_height="match_parent"
     android:clipChildren="false">
 
-    <org.lineageos.setupwizard.widget.RevealHoleView
+    <org.blissroms.setupwizard.widget.RevealHoleView
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

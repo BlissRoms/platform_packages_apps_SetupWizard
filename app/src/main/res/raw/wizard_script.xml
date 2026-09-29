@@ -288,37 +288,37 @@
     </WizardAction>
     <WizardAction
         id="oem_post_setup"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP;end">
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.BLISS_RESTORE_BACKUP;end">
         <result wizard:action="device_specific" />
     </WizardAction>
     <WizardAction
         id="device_specific"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.DEVICE_SPECIFIC;end">
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.DEVICE_SPECIFIC;end">
         <result wizard:action="recovery_update" />
     </WizardAction>
     <WizardAction
         id="recovery_update"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.LINEAGE_RECOVERY_UPDATE;end">
-        <result wizard:action="lineage_settings" />
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.BLISS_RECOVERY_UPDATE;end">
+        <result wizard:action="bliss_settings" />
     </WizardAction>
     <WizardAction
-        id="lineage_settings"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.LINEAGE_SETTINGS;end">
+        id="bliss_settings"
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.BLISS_SETTINGS;end">
         <result wizard:action="theme_settings" />
     </WizardAction>
     <WizardAction
         id="theme_settings"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.THEME_SETTINGS;end">
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.THEME_SETTINGS;end">
         <result wizard:action="navigation_settings" />
     </WizardAction>
     <WizardAction
         id="navigation_settings"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.NAVIGATION_SETTINGS;end">
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.NAVIGATION_SETTINGS;end">
         <result wizard:action="finish" />
     </WizardAction>
     <WizardAction
         id="finish"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE;end">
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.BLISS_SETUP_COMPLETE;end">
         <result wizard:action="exit" />
     </WizardAction>
     <WizardAction

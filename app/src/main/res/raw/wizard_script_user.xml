@@ -135,7 +135,7 @@
     </WizardAction>
     <WizardAction
         id="oem_post_setup"
-        wizard:uri="intent:#Intent;package=org.lineageos.setupwizard;action=org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE;end" />
+        wizard:uri="intent:#Intent;package=org.blissroms.setupwizard;action=org.blissroms.setupwizard.BLISS_SETUP_COMPLETE;end" />
     <WizardAction
         id="kid_post_setup"
         wizard:uri="intent:#Intent;package=com.google.android.setupwizard;action=com.google.android.setupwizard.KID_POST_SETUP;end" />

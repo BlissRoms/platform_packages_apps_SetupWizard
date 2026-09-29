@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<WizardScript xmlns:wizard="http://schemas.android.com/apk/res/com.google.android.setupwizard"
+    wizard:firstAction="bluetooth_setup">
+
+    <WizardAction
+        id="bluetooth_setup"
+        wizard:uri="intent:#Intent;action=org.blissroms.setupwizard.BLISS_BLUETOOTH_SETUP;end">
+        <result wizard:action="welcome_locale" />
+    </WizardAction>
+
+    <WizardAction
+        id="welcome_locale"
+        wizard:uri="intent:#Intent;action=org.blissroms.setupwizard.BLISS_WELCOME_LOCALE;end">
+        <result wizard:action="network_setup" />
+    </WizardAction>
+
+    <WizardAction
+        id="network_setup"
+        wizard:uri="intent:#Intent;action=org.blissroms.setupwizard.BLISS_NETWORK_SETUP;end">
+        <result wizard:action="device_specific" />
+    </WizardAction>
+
+    <WizardAction
+        id="device_specific"
+        wizard:uri="intent:#Intent;action=org.blissroms.setupwizard.DEVICE_SPECIFIC;end">
+        <result wizard:action="recovery_update" />
+    </WizardAction>
+
+    <WizardAction
+        id="recovery_update"
+        wizard:uri="intent:#Intent;action=org.blissroms.setupwizard.BLISS_RECOVERY_UPDATE;end">
+        <result wizard:action="bliss_settings" />
+    </WizardAction>
+
+    <WizardAction
+        id="bliss_settings"
+        wizard:uri="intent:#Intent;action=org.blissroms.setupwizard.BLISS_SETTINGS;end">
+        <result wizard:action="finish" />
+    </WizardAction>
+
+    <WizardAction
+        id="finish"
+        wizard:uri="intent:#Intent;action=org.blissroms.setupwizard.BLISS_SETUP_COMPLETE;end" />
+
+</WizardScript>
