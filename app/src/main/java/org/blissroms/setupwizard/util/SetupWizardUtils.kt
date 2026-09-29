@@ -41,6 +41,7 @@ import org.blissroms.setupwizard.ENABLE_RECOVERY_UPDATE
 import org.blissroms.setupwizard.KEY_SEND_METRICS
 import org.blissroms.setupwizard.LOGV
 import org.blissroms.setupwizard.NAVIGATION_OPTION_KEY
+import org.blissroms.setupwizard.R
 import org.blissroms.setupwizard.SetupWizardApp
 import org.blissroms.setupwizard.UPDATE_RECOVERY_PROP
 import org.blissroms.setupwizard.base.BaseSetupWizardActivity
@@ -65,6 +66,10 @@ object SetupWizardUtils {
     private const val UPDATE_RECOVERY_EXEC = "/vendor/bin/install-recovery.sh"
     private const val CONFIG_HIDE_RECOVERY_UPDATE = "config_hideRecoveryUpdate"
     private const val PROP_BUILD_DATE = "ro.build.date.utc"
+    private const val PROP_PROJECT = "ro.bliss.project"
+
+    fun getProjectName(context: Context): String =
+        SystemProperties.get(PROP_PROJECT).ifEmpty { context.getString(R.string.os_name) }
 
     fun getPrefs(context: Context): SharedPreferences =
         context.getSharedPreferences("SetupWizardPrefs", MODE_PRIVATE)

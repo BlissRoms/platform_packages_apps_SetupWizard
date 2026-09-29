@@ -13,12 +13,15 @@ import com.google.android.setupcompat.util.ResultCodes.RESULT_ACTIVITY_NOT_FOUND
 import org.blissroms.setupwizard.ACTION_RESTORE_FROM_BACKUP
 import org.blissroms.setupwizard.R
 import org.blissroms.setupwizard.base.SubBaseActivity
+import org.blissroms.setupwizard.util.SetupWizardUtils
 
 class RestoreIntroActivity : SubBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setDescriptionText(getString(R.string.intro_restore_subtitle, getString(R.string.os_name)))
+        setDescriptionText(
+            getString(R.string.intro_restore_subtitle, SetupWizardUtils.getProjectName(this))
+        )
         setNextText(R.string.intro_restore_button)
     }
 

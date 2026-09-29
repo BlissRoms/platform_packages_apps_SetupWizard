@@ -17,6 +17,7 @@ import org.blissroms.setupwizard.KEY_SEND_METRICS
 import org.blissroms.setupwizard.R
 import org.blissroms.setupwizard.SetupWizardApp
 import org.blissroms.setupwizard.base.BaseSetupWizardActivity
+import org.blissroms.setupwizard.util.SetupWizardUtils
 
 class BlissSettingsActivity : BaseSetupWizardActivity() {
 
@@ -28,7 +29,7 @@ class BlissSettingsActivity : BaseSetupWizardActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val osName = getString(R.string.os_name)
+        val osName = SetupWizardUtils.getProjectName(this)
         setDescriptionText(buildDescription(osName))
 
         val metricsHelpImproveBliss = getString(R.string.services_help_improve_cm, osName)
