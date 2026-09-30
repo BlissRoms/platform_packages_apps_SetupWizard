@@ -26,6 +26,7 @@ class SetupWizardActivity : AppCompatActivity() {
             return
         }
         SetupWizardUtils.enableComponent(this, WizardManager::class.java)
+        SetupWizardUtils.enableGesturalNavigation(this)
         val scriptUri =
             when {
                 SetupWizardUtils.isOwner() -> R.string.bliss_wizard_script_uri
